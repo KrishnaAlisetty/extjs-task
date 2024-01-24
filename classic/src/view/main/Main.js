@@ -8,18 +8,18 @@
 Ext.define("MyApp.view.main.Main", {
   extend: "Ext.tab.Panel",
   xtype: "app-main",
-
   requires: [
     "Ext.plugin.Viewport",
     "Ext.window.MessageBox",
-
+    "MyApp.controller.UserController",
     "MyApp.view.main.MainController",
     "MyApp.view.main.MainModel",
     "MyApp.view.main.List",
+    "MyApp.viewmodel.UserCountModel",
   ],
 
-  controller: "main",
-  viewModel: "main",
+  controller: "userForm",
+  viewModel: "userCountVM",
 
   ui: "navigation",
 
@@ -77,10 +77,14 @@ Ext.define("MyApp.view.main.Main", {
   items: [
     {
       xtype: "mainform",
+      itemId: "formPanel",
     },
     {
       xype: "panel",
-      title: "User Data",
+      bind: {
+        title: "{ title } ( {count} )",
+      },
+      itemId: "dataPanel",
       items: [
         {
           xtype: "mainlist",

@@ -1,7 +1,5 @@
-Ext.define('MyApp.model.Personnel', {
-    extend: 'MyApp.model.Base',
+Ext.define("MyApp.model.Personnel", {
+  extend: "MyApp.model.Base",
 
-    fields: [
-        'name', 'email', 'phone'
-    ]
+  fields: ["name", "email", "gender"],
 });

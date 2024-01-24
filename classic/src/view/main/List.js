@@ -8,7 +8,7 @@ Ext.define("MyApp.view.main.List", {
   requires: ["MyApp.store.Personnel"],
 
   title: "Personnel",
-
+  itemId: "gridPanel",
   store: {
     type: "personnel",
   },
@@ -16,7 +16,7 @@ Ext.define("MyApp.view.main.List", {
   columns: [
     { text: "Name", dataIndex: "name" },
     { text: "Email", dataIndex: "email", flex: 1 },
-    { text: "Gender", dataIndex: "phone", flex: 1 },
+    { text: "Gender", dataIndex: "gender", flex: 1 },
   ],
 
   listeners: {

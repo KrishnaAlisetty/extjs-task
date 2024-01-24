@@ -5,7 +5,7 @@ Ext.define("MyApp.view.main.UserForm", {
   extend: "Ext.form.Panel",
   xtype: "mainform",
   title: "User Form",
-  controller: "userForm",
+  // controller: "userForm",
   height: 350,
   width: 300,
   bodyPadding: 20,
@@ -17,6 +17,7 @@ Ext.define("MyApp.view.main.UserForm", {
       msgTarget: "under", // location of the error message
       invalidText: '"{0}" bad. "{1}" good.',
       regex: /[A-Za-z]+/i,
+      required: true,
     },
     {
       fieldLabel: "Email",
@@ -47,7 +48,9 @@ Ext.define("MyApp.view.main.UserForm", {
     {
       xtype: "combobox",
       fieldLabel: "Vaccinated",
+      itemId: "vaccineCombo",
       store: ["Dose-1", "Dose-2", "Booster"],
+      editable: false,
     },
 
     {
