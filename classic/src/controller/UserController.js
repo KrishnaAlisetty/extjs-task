@@ -19,7 +19,7 @@ Ext.define("MyApp.controller.UserController", {
       let data = Ext.create("MyApp.model.Personnel", {
         name: formData.userName,
         email: formData.email,
-        gender: formData.gender,
+        gender: formData.rb,
       });
 
       gridStore.add(data);

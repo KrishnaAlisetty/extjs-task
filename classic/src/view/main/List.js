@@ -18,8 +18,4 @@ Ext.define("MyApp.view.main.List", {
     { text: "Email", dataIndex: "email", flex: 1 },
     { text: "Gender", dataIndex: "gender", flex: 1 },
   ],
-
-  listeners: {
-    select: "onItemSelected",
-  },
 });
