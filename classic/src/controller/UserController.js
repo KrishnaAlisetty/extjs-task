@@ -4,9 +4,6 @@
 Ext.define("MyApp.controller.UserController", {
   extend: "Ext.app.ViewController",
   alias: "controller.userForm",
-  onItemSelected: function (sender, record) {
-    Ext.Msg.confirm("Confirm", "Are you sure?", "onConfirm", this);
-  },
 
   onAddClick: function () {
     var me = this,
@@ -15,6 +12,7 @@ Ext.define("MyApp.controller.UserController", {
       gridStore = grid.down("#gridPanel").getStore(),
       formData = form.getFieldValues(),
       viewModel = this.getViewModel();
+
     if (true) {
       let data = Ext.create("MyApp.model.Personnel", {
         name: formData.userName,

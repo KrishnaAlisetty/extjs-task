@@ -17,5 +17,19 @@ Ext.define("MyApp.view.main.List", {
     { text: "Name", dataIndex: "name" },
     { text: "Email", dataIndex: "email", flex: 1 },
     { text: "Gender", dataIndex: "gender", flex: 1 },
+    {
+      xtype: "actioncolumn",
+      width: 50,
+      items: [
+        {
+          iconCls: "x-fa fa-remove",
+          tooltip: "Edit",
+          handler: function (grid, rowIndex, colIndex) {
+            var store = grid.getStore();
+            store.remove(store.getAt(rowIndex));
+          },
+        },
+      ],
+    },
   ],
 });
