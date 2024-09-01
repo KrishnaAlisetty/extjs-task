@@ -7,14 +7,21 @@ Ext.define("MyApp.view.main.List", {
 
   requires: ["MyApp.store.Personnel"],
 
-  title: "Personnel",
+  title: "User Data",
   itemId: "gridPanel",
   store: {
     type: "personnel",
   },
 
   columns: [
-    { text: "Name", dataIndex: "name" },
+    {
+      text: "Name",
+      dataIndex: "name",
+      editor: {
+        xtype: "textfield",
+        allowBlank: false,
+      },
+    },
     { text: "Email", dataIndex: "email", flex: 1 },
     { text: "Gender", dataIndex: "gender", flex: 1 },
     {
